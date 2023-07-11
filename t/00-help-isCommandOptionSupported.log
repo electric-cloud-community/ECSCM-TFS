@@ -1,0 +1,149 @@
+Team Explorer Everywhere Command Line Client (version 11.0.0.201306181526)
+
+ Available commands and their options:
+
+  add        [-lock:none|checkin|checkout] [-type:<value>] [-recursive]
+             [-silent] [-noignore] <localItemSpec>...
+  branch     [-version:<value>] [-noget] [-lock:none|checkin|checkout]
+             [-recursive] [-checkin] [-comment:<value>|@valuefile]
+             [-author:<value>]
+             [-notes:"note"="value"[;"note2"="value2"[;...]]|@notefile]
+             <oldItemSpec> <newLocalItem>
+  branches   [-version:<value>] <itemSpec>...
+  changeset  [-latest] [-comment:<value>|@valuefile]
+             [-notes:"note"="value"[;"note2"="value2"[;...]]|@notefile]
+             [changenumber]
+  checkin    [-all] [-author:<value>] [-comment:<value>|@valuefile]
+             [-notes:"note"="value"[;"note2"="value2"[;...]]|@notefile]
+             [-override:<value>|@valuefile] [-recursive] [-validate] [-bypass]
+             [-force] [-noautoresolve]
+             [-associate:<workItemID>[,<workItemID>...]]
+             [-resolve:<workItemID>[,<workItemID>...]] [-saved] [<itemSpec>...]
+  checkout   [-recursive] [-lock:none|checkin|checkout] [-type:<value>]
+             <itemSpec>...
+  delete     [-lock:none|checkin|checkout] [-recursive] <itemSpec>...
+  delete     -detect [-lock:none|checkin|checkout] [-recursive]
+  destroy    [-keephistory] [-startcleanup] [-preview] [-silent]
+             [-stopat:<value>] [-noprompt]
+             itemspec1[;versionspec][;XdeletionID] [itemspec2...itemspecN]
+  difference [-recursive] <itemSpec> <itemSpec2>
+  difference [-shelveset:<value>] [-recursive] <shelvesetItemSpec>
+  difference [-version:<value>] [-recursive] <itemSpec>
+  dir        [-version:<value>] [-recursive] [-folders] [-deleted]
+             <itemSpec>...
+  eula       [-accept]
+  get        [-version:<value>] [-recursive] [-preview] [-force] [-all]
+             [-overwrite] [-noautoresolve] [<itemSpec>...]
+  getcs      -changeset:changeset [-latest]
+  help       [-listexitcodes] [<command>]
+  history    [-version:<value>] [-stopafter:<value>] [-recursive]
+             [-user:<value>] [-format:brief|detailed|xml] [-slotmode]
+             [-itemmode] <itemSpec>
+  info       [-recursive] [-version:<value>] <itemSpec>...
+  label      [-owner:<value>] [-version:<value>] [-comment:<value>|@valuefile]
+             [-child:fail|replace|merge] [-recursive] <labelName>[@<scope>]
+             <itemSpec>...
+  label      -delete [-owner:<value>] [-version:<value>] <labelName>[@<scope>]
+  labels     [-owner:<value>] [-format:brief|detailed|xml] [<labelNameFilter>]
+  lock       [-recursive] [-lock:none|checkin|checkout] <itemSpec>...
+  merge      [-recursive] [-force] [-candidate] [-discard] [-version:<value>]
+             [-lock:none|checkin|checkout] [-preview] [-baseless] [-nosummary]
+             [-noimplicitbaseless] [-format:brief|detailed|xml]
+             [-noautoresolve] <source> <destination>
+  merges     [-recursive] [-format:brief|detailed|xml] [<sourceItem>]
+             <destinationItem>
+  online     [-adds] [-deletes] [-diff] [-exclude:<value>[,<value>]]
+             [-recursive] [-preview] [<itemSpec>...]
+  print      [-version:<value>] <itemSpec>
+  property   [-output:<value>] [-recursive] [-version:<value>] <itemSpec>
+             [<propertyname>]
+  property   -deleteall [-recursive] <itemSpec>
+  property   -deletevalues:<value>[,<value>] [-recursive] <itemSpec>
+  property   -setvalues:@valuefile|
+             name1=value1[;name2=value2;name3=@valuefile;...] [-recursive]
+             <itemSpec>
+  reconcile  [-teamProject:<value>]
+  reconcile  -buildName:<value> [-teamProject:<value>] [-recursive]
+             [<itemSpec>...]
+  reconcile  -changeset:changeset [-recursive] [<itemSpec>...]
+  reconcile  -forgetBuild:<buildName> [-teamProject:<value>]
+  rename     [-lock:none|checkin|checkout] <oldItem> <newItem>
+  resolve    [-auto:AutoMerge|TakeTheirs|KeepYours|OverwriteLocal|
+             DeleteConflict|KeepYoursRenameTheirs|External] [-preview]
+             [-converttotype:<value>] [-recursive] [-newname:<value>]
+             <itemSpec>
+  resolve    [-auto:AutoMerge|TakeTheirs|KeepYours|OverwriteLocal|
+             DeleteConflict|KeepYoursRenameTheirs|External] [-preview]
+             [-overridetype:<value>] [-recursive] [-newname:<value>] <itemSpec>
+  rollback   -changeset:changesetfrom~changesetto [-recursive]
+             [-lock:none|checkin|checkout] [-version:<value>]
+             [-keepmergehistory] [-noautoresolve] [<itemSpec>...]
+  rollback   -toversion:versionspec [-recursive] [-lock:none|checkin|checkout]
+             [-version:<value>] [-keepmergehistory] [-noautoresolve]
+             <itemSpec>...
+  shelve     [-move] [-replace] [-comment:<value>|@valuefile] [-recursive]
+             [-validate] [-saved] <shelvesetName[;owner]> <fileSpec>...
+  shelve     [-replace] [-comment:<value>|@valuefile] [-validate] [-saved]
+             <shelvesetName[;owner]>
+  shelve     -delete [-collection:<url>] [-validate] [-saved]
+             <shelvesetName[;owner]>
+  shelvesets [-owner:<value>] [-format:brief|detailed|xml] [<shelvesetName>]
+  status     [-workspace:<value>] [-shelveset:<value>]
+             [-format:brief|detailed|xml] [-recursive] [-user:<value>]
+             [-nodetect] [<itemSpec>...]
+  undelete   [-noget] [-lock:none|checkin|checkout] [-newname:<value>]
+             <itemSpec>[;deletionID]...
+  undelete   [-noget] [-lock:none|checkin|checkout] [-recursive]
+             <itemSpec>[;deletionID]...
+  undo       [-recursive] <itemSpec>...
+  unlabel    [-recursive] <labelName>[@<scope>] <itemSpec>...
+  unshelve   [-move] [-recursive] [-nomerge] [-noautoresolve]
+             [-format:brief|detailed|xml] <shelvesetName[;owner]>
+             [<itemSpec>...]
+  uu         [-recursive] [-noprompt] <itemSpec>...
+  workfold   [-collection:<url>] [-workspace:<value>] <serverFolder>
+  workfold   [-map] [-collection:<url>] [-workspace:<value>] <serverFolder>
+             <localFolder>
+  workfold   [-workspace:<value>]
+  workfold   <localFolder>
+  workfold   -cloak [-collection:<url>] [-workspace:<value>]
+             <serverFolder>|<localFolder>
+  workfold   -decloak [-collection:<url>] [-workspace:<value>]
+             <serverFolder>|<localFolder>
+  workfold   -unmap [-collection:<url>] [-workspace:<value>]
+             <serverFolder>|<localFolder>
+  workspace  [-collection:<url>] [-comment:<value>|@valuefile]
+             [-newname:<value>] [-filetime:current|checkin]
+             [-permission:Private|PublicLimited|Public]
+             [<workspacename;[workspaceowner]>]
+  workspace  -delete [-collection:<url>] [<workspacename;[workspaceowner]>]
+  workspace  -new [-noprompt] [-template:<value>] [-computer:<value>]
+             [-comment:<value>|@valuefile] [-collection:<url>]
+             [-location:server|local] [-filetime:current|checkin]
+             [-permission:Private|PublicLimited|Public]
+             [<workspacename;[workspaceowner]>]
+  workspaces [-owner:<value>] [-computer:<value>] [-collection:<url>]
+             [-format:brief|detailed|xml]
+             [-updateUserName:<user@domain>|<domain\user>]
+             [-updateComputerName:<value>] workspaceName
+  workspaces -remove:<workspace1>[,<workspace2>,...] -collection:<url>
+
+ Options accepted by most commands:
+
+  [-login:domain\username,password] | [-login:username@domain,password] 
+  -collection:<url>                                                     
+  -continueOnError                                                      
+  -exitcode                                                             
+  -help                                                                 
+  -noprompt                                                             
+  -nosummary                                                            
+  -outputSeparator:<value>                                              
+  -proxy:<url>                                                          
+  -server:<url>                                                         
+  -workspace:<value>                                                    
+
+Options may be started with any of: - 
+
+For general help, view the 'help/index.htm' file installed with the program.
+For help on a specific command, supply the command name as an argument
+to the help command.  For example: 'tf help checkin'

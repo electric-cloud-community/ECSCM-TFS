@@ -1,0 +1,21 @@
+<editor>
+    <formElement>
+        <type>textarea</type>
+        <label>Description:</label>
+        <property>desc</property>
+        <value>TFS configuration</value>
+        <documentation>You can supply a text description for your reference only. Commander does not use this information.</documentation>
+    </formElement>
+    <formElement>
+        <type>credential</type>
+        <label>Login As:</label>
+        <property>credential</property>
+        <documentation>Provide the user name and password Commander uses to communicate with the TFS server.</documentation>
+    </formElement>
+    <formElement>
+        <type>entry</type>
+        <label>TFS binary path:</label>
+        <property>binpath</property>
+        <documentation>Path to TFS binary</documentation>
+    </formElement>
+</editor>

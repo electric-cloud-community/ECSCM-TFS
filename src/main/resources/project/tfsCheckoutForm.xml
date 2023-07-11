@@ -1,0 +1,142 @@
+<editor>
+    <help>/commander/pages/@PLUGIN_NAME@/@PLUGIN_KEY@_help?s=Administration&amp;ss=Plugins#CheckoutCode</help>
+    <formElement>
+        <type>entry</type>
+        <label>Configuration:</label>
+        <property>config</property>
+        <documentation>The SCM configuration to use</documentation>
+        <required>1</required>
+    </formElement>
+    <formElement>
+        <type>checkbox</type>
+        <label>Create workspace:</label>
+        <property>createw</property>
+        <checkedValue>1</checkedValue>
+        <uncheckedValue>0</uncheckedValue>
+        <documentation>Choose whether you want to create a workspace or not</documentation>
+    </formElement>
+    <formElement>
+        <type>checkbox</type>
+        <label>Delete workspace:</label>
+        <property>deletew</property>
+        <checkedValue>1</checkedValue>
+        <uncheckedValue>0</uncheckedValue>
+        <documentation>Choose whether you want to delete a workspace or not.</documentation>
+    </formElement>
+    <formElement>
+        <type>select</type>
+        <label>Workspace location:</label>
+        <property>workspace_location</property>
+        <documentation>Select workspace location for created workspace. Requires VS2013 and later.</documentation>
+        <required>0</required>
+        <option><name>Local</name><value>local</value></option>
+        <option><name>Server</name><value>server</value></option>
+    </formElement>
+    <formElement>
+        <type>entry</type>
+        <label>Workspace template name:</label>
+        <property>workspace_template_name</property>
+        <required>0</required>
+        <documentation>Specifies a name for workspace template from which workspace will be created.</documentation>
+    </formElement>
+    <formElement>
+        <type>entry</type>
+        <label>Workspace name:</label>
+        <property>workspacename</property>
+        <required>1</required>
+        <documentation>Specifies a name for the workspace to create, edit, delete, or display information about.</documentation>
+    </formElement>
+    <formElement>
+        <type>entry</type>
+        <label>Destination Directory:</label>
+        <property>dest</property>
+        <required>1</required>
+        <documentation>A path relative to the job's workspace, where the source tree will be created.</documentation>
+    </formElement>
+    <formElement>
+        <type>entry</type>
+        <label>Collection URL (VS2010 and later):</label>
+        <property>collection</property>
+        <required>0</required>
+        <documentation>TFS Collection URL. For example: "http://teamfoundation:8080/tfs/BuildCollection"</documentation>
+    </formElement>
+    <formElement>
+        <type>entry</type>
+        <label>Server Hostname (VS2008 and earlier):</label>
+        <property>server</property>
+        <required>0</required>
+        <documentation>TFS server host name. For example "TFSRMT08"</documentation>
+    </formElement>
+    <formElement>
+        <type>entry</type>
+        <label>Server folder:</label>
+        <property>serverfolder</property>
+        <required>0</required>
+        <documentation>Specifies the name of a Team Foundation version control server folder.</documentation>
+    </formElement>
+    <formElement>
+        <type>entry</type>
+        <label>Itemspec:</label>
+        <property>itemspec</property>
+        <required>0</required>
+        <documentation>Specifies one or more files to check out. You can use wildcard characters here.</documentation>
+    </formElement>
+    <formElement>
+        <type>entry</type>
+        <label>Version:</label>
+        <property>version</property>
+        <documentation>Optional version specification. The versionspec is the version of the item you want to retrieve.</documentation>
+    </formElement>
+   <formElement>
+        <type>entry</type>
+        <label>Shelveset name</label>
+        <property>shelvesetName</property>
+        <documentation>The name of the shelveset to restore.</documentation>
+    </formElement>
+    <formElement>
+        <type>entry</type>
+        <label>Shelveset owner</label>
+        <property>shelvesetOwner</property>
+        <documentation>The name of the shelveset owner.</documentation>
+    </formElement>
+    <formElement>
+        <type>checkbox</type>
+        <label>Recursive:</label>
+        <property>recursive</property>
+        <checkedValue>1</checkedValue>
+        <uncheckedValue>0</uncheckedValue>
+        <documentation>Checks out all files that match the itemspec in the current directory and in all the subfolders of the current directory.</documentation>
+    </formElement>
+    <formElement>
+        <type>checkbox</type>
+        <label>All:</label>
+        <property>all</property>
+        <checkedValue>1</checkedValue>
+        <uncheckedValue>0</uncheckedValue>
+        <documentation>Forces all files to be retrieved, not just those that are out-of-date.</documentation>
+    </formElement>
+    <formElement>
+        <type>checkbox</type>
+        <label>Overwrite:</label>
+        <property>overwrite</property>
+        <checkedValue>1</checkedValue>
+        <uncheckedValue>0</uncheckedValue>
+        <documentation>By default, the system does not retrieve an item if it is writable (that is, if its read-only attribute is cleared) on the client machine. This option overrides the default behavior and overwrites a writable item, unless the item is checked out.</documentation>
+    </formElement>
+    <formElement>
+        <type>checkbox</type>
+        <label>Force:</label>
+        <property>force</property>
+        <checkedValue>1</checkedValue>
+        <uncheckedValue>0</uncheckedValue>
+        <documentation>Combines /all and /overwrite.</documentation>
+    </formElement>
+    <formElement>
+        <type>checkbox</type>
+        <label>Undo pending changes:</label>
+        <property>undoPendingChanges</property>
+        <checkedValue>1</checkedValue>
+        <uncheckedValue>0</uncheckedValue>
+        <documentation>Discards one or more pending changes to files or folders.</documentation>
+    </formElement>
+</editor>

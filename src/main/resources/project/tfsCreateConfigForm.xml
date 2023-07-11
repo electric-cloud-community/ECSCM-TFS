@@ -1,0 +1,29 @@
+<editor>
+    <formElement>
+        <type>entry</type>
+        <label>Configuration Name:</label>
+        <property>config</property>
+        <required>1</required>
+        <documentation>Provide a unique name for the configuration, keeping in mind that you may need to create additional configurations over time.</documentation>
+        <configuration>1</configuration>
+    </formElement>
+    <formElement>
+        <type>textarea</type>
+        <label>Description:</label>
+        <property>desc</property>
+        <value>TFS configuration</value>
+        <documentation>You can supply a text description for your reference only. Commander does not use this information.</documentation>
+    </formElement>
+    <formElement>
+        <type>credential</type>
+        <label>Login As:</label>
+        <property>credential</property>
+        <documentation>Provide the user name and password Commander uses to communicate with the TFS server.</documentation>
+    </formElement>
+    <formElement>
+        <type>entry</type>
+        <label>TFS binary path:</label>
+        <property>binpath</property>
+        <documentation>Path to TFS binary, if not included in PATH variable.</documentation>
+    </formElement>
+</editor>

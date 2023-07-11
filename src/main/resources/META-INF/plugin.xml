@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+    <key>ECSCM-TFS</key>
+    <version>@PLUGIN_VERSION@</version>
+    <label>ECSCM-TFS</label>
+    <description>SCM Plugin for TFS</description>
+    <author>CloudBees</author>
+    <authorUrl>https://github.com/electric-cloud-community</authorUrl>
+    <category>Source Code Management</category>
+    <commander-version min="3.6"/>
+    <depends min="1.0">ECSCM</depends>
+	<repositoryUrl>https://github.com/electric-cloud-community/ECSCM-TFS</repositoryUrl> 
+	<customTypes>
+	    <customType name="reports">
+          <displayName>Display TFS Changelog Report</displayName>
+          <description></description>
+          <page pageName="TFSReports" definition="pages/reports.xml"/>
+        </customType>
+   </customTypes>
+   <components>
+      <component name="Reports">
+      <javascript>war/ecplugins.ECSCM.Reports/ecplugins.ECSCM.Reports.nocache.js</javascript>
+     </component>
+   </components>
+   
+    <help>ECSCM-TFS_help.xml</help>
+    <catalogLabel>Team Foundation Server</catalogLabel>
+    <detailedDescription>Visual Studio Team Foundation Server 2013 (TFS) is the collaboration platform at the core of the Microsoft application lifecycle management solution. TFS automates the software delivery process and has the tools you need to effectively manage software development projects throughout the IT lifecycle. Connect the TFS source control server to CloudBees CD to perform code checkouts, preflight builds, and continuous  integration.</detailedDescription>
+</plugin>

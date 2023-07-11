@@ -1,0 +1,9 @@
+<editor>
+    <formElement>
+        <type>entry</type>
+        <label>Workspace:</label>
+        <property>workspace</property>
+        <required>1</required>
+        <documentation></documentation>
+    </formElement>
+</editor>
